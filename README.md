@@ -1,48 +1,34 @@
-# Super Trunfo – Comparação Avançada com Dois Atributos
+Batalha de Cartas - Super Trunfo de Cidades
+Este é um programa simples em C, desenvolvido como trabalho acadêmico, que simula uma rodada do jogo Super Trunfo. O usuário cadastra os dados de duas cidades e, em seguida, escolhe dois atributos para compará-las.
 
----
+Como Compilar e Executar
+1. Pré-requisito:
 
-Este repositório contém um jogo de cartas simples, escrito em **C**, que simula uma batalha de atributos. O programa compara duas "cartas", cada uma representando uma cidade com seus dados estatísticos e determina qual delas vence em cada categoria.
+É necessário ter um compilador C instalado (como o GCC).
 
-## **Funcionalidades**
+2. Compilar o código:
+No seu terminal, execute o seguinte comando para criar o programa executável:
 
-O programa permite ao usuário inserir dados para duas cartas, incluindo:
+Bash
 
-* **Estado**  
-* **Cidade**  
-* **Código**  
-* **População** (`unsigned long int`)  
-* **Área** (`double`)  
-* **PIB** (`double`)  
-* **Pontos turísticos** (`unsigned int`)  
+gcc main.c -o jogo
+3. Executar o programa:
+Após a compilação, execute o arquivo gerado:
 
-A partir desses dados, o programa calcula e compara os seguintes atributos:
+Bash
 
-* **Densidade Demográfica**: População / Área.  
-* **PIB per Capita**: PIB / População.  
+./jogo
+Depois, basta seguir as instruções que aparecem no terminal.
 
-## **Regras do Jogo**
+Regras do Jogo
+Cadastro: O usuário informa os dados (população, área, PIB, etc.) para as duas cartas (cidades).
 
-O programa compara as duas cartas com base nas seguintes regras:
+Escolha: O usuário escolhe dois atributos para a batalha.
 
-* **Vencedor por maior valor**: Para **População**, **Área**, **PIB**, **Pontos Turísticos** e **PIB per Capita**, a carta com o maior valor vence.  
-* **Vencedor por menor valor**: Para a **Densidade Demográfica**, a carta com o menor valor vence.  
+Comparação Individual:
 
-O usuário escolhe dois atributos diferentes para comparar. O programa exibe o vencedor de cada atributo e também calcula a soma dos valores desses atributos para determinar o vencedor final.
+Para a maioria dos atributos, o maior valor vence.
 
----
+A única exceção é a Densidade Demográfica, onde o menor valor vence.
 
-## **Como Compilar e Executar**
-
-1. Salve o código em um arquivo com a extensão `.c` (por exemplo, `batalha_cartas.c`).  
-2. Use um compilador C (como **GCC**) para compilar o arquivo. Abra o terminal e execute:
-
-```bash
-gcc batalha_cartas.c -o batalha_cartas
-Execute o programa compilado:
-
-bash
-Copiar
-Editar
-./batalha_cartas
-Siga as instruções na tela para inserir os dados das duas cartas.
+Vencedor Final: O vencedor geral é a carta cuja soma dos valores dos dois atributos escolhidos for maior.
