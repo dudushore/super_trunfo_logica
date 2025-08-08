@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 int main() {
-    // Dados das cartas
     char estado1[50], cidade1[50], codigo1[50];
     char estado2[50], cidade2[50], codigo2[50];
     unsigned long population1, population2;
@@ -9,7 +8,6 @@ int main() {
     unsigned int pontos1, pontos2;
     double densidade1, densidade2, pib_per_capita1, pib_per_capita2;
 
-    // Cadastro Carta 1
     printf("Digite o ESTADO da primeira carta: ");
     scanf(" %[^\n]", estado1);
     printf("Digite o CÓDIGO da primeira carta: ");
@@ -25,7 +23,6 @@ int main() {
     printf("Pontos turísticos: ");
     scanf("%u", &pontos1);
 
-    // Cadastro Carta 2
     printf("\nDigite o ESTADO da segunda carta: ");
     scanf(" %[^\n]", estado2);
     printf("Digite o CÓDIGO da segunda carta: ");
@@ -40,14 +37,12 @@ int main() {
     scanf("%lf", &pib2);
     printf("Pontos turísticos: ");
     scanf("%u", &pontos2);
-
-    // Cálculos automáticos
+    
     densidade1 = (double)population1 / area1;
     densidade2 = (double)population2 / area2;
     pib_per_capita1 = pib1 / population1;
     pib_per_capita2 = pib2 / population2;
 
-    // Escolha dos atributos
     int atributo1, atributo2;
     double valor1_c1 = 0, valor1_c2 = 0;
     double valor2_c1 = 0, valor2_c2 = 0;
@@ -101,15 +96,12 @@ int main() {
         case 6: valor2_c1 = pib_per_capita1; valor2_c2 = pib_per_capita2; break;
     }
 
-    // Comparações individuais
     int v1_attr1 = (atributo1 == 5) ? (valor1_c1 < valor1_c2) : (valor1_c1 > valor1_c2);
     int v1_attr2 = (atributo2 == 5) ? (valor2_c1 < valor2_c2) : (valor2_c1 > valor2_c2);
-
-    // Soma total
+    
     double soma_c1 = valor1_c1 + valor2_c1;
     double soma_c2 = valor1_c2 + valor2_c2;
 
-    // Resultado
     printf("\n===== RESULTADO =====\n");
     printf("Estado Carta 1: %s\n", estado1);
     printf("Estado Carta 2: %s\n\n", estado2);
@@ -148,3 +140,4 @@ int main() {
 
     return 0;
 }
+
