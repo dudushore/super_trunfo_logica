@@ -1,52 +1,48 @@
 # Super Trunfo – Comparação Avançada com Dois Atributos
 
-Este programa em C simula uma rodada avançada do jogo **Super Trunfo** entre duas cartas de cidades/estados.  
-O jogador cadastra os dados de duas cartas e escolhe **dois atributos diferentes** para compará-las.  
-O sistema então:
+---
 
-- Compara cada atributo separadamente (com exceção para densidade demográfica, onde o menor valor vence).
-- Soma os dois atributos escolhidos para definir o vencedor final da rodada.
-- Trata casos de **empate** de forma clara.
-- Utiliza menus dinâmicos para impedir que o jogador escolha o mesmo atributo duas vezes.
+Este repositório contém um jogo de cartas simples, escrito em **C**, que simula uma batalha de atributos. O programa compara duas "cartas", cada uma representando uma cidade com seus dados estatísticos e determina qual delas vence em cada categoria.
+
+## **Funcionalidades**
+
+O programa permite ao usuário inserir dados para duas cartas, incluindo:
+
+* **Estado**  
+* **Cidade**  
+* **Código**  
+* **População** (`unsigned long int`)  
+* **Área** (`double`)  
+* **PIB** (`double`)  
+* **Pontos turísticos** (`unsigned int`)  
+
+A partir desses dados, o programa calcula e compara os seguintes atributos:
+
+* **Densidade Demográfica**: População / Área.  
+* **PIB per Capita**: PIB / População.  
+
+## **Regras do Jogo**
+
+O programa compara as duas cartas com base nas seguintes regras:
+
+* **Vencedor por maior valor**: Para **População**, **Área**, **PIB**, **Pontos Turísticos** e **PIB per Capita**, a carta com o maior valor vence.  
+* **Vencedor por menor valor**: Para a **Densidade Demográfica**, a carta com o menor valor vence.  
+
+O usuário escolhe dois atributos diferentes para comparar. O programa exibe o vencedor de cada atributo e também calcula a soma dos valores desses atributos para determinar o vencedor final.
 
 ---
 
-## Funcionalidades
+## **Como Compilar e Executar**
 
-- Cadastro de duas cartas com:
-  - Estado
-  - Código
-  - Cidade
-  - População
-  - Área
-  - PIB
-  - Pontos turísticos
-- Cálculo automático de:
-  - **Densidade demográfica** (População / Área)
-  - **PIB per Capita** (PIB / População)
-- Escolha de dois atributos diferentes para comparação:
-  1. População
-  2. Área
-  3. PIB
-  4. Pontos Turísticos
-  5. Densidade Demográfica *(menor vence)*
-  6. PIB per Capita
-- Resultado da comparação:
-  - Vencedor de cada atributo
-  - Soma total dos dois atributos
-  - Resultado final da rodada (Carta 1, Carta 2 ou Empate)
-
----
-
-## Como executar
-
-1. Compile o código:
+1. Salve o código em um arquivo com a extensão `.c` (por exemplo, `batalha_cartas.c`).  
+2. Use um compilador C (como **GCC**) para compilar o arquivo. Abra o terminal e execute:
 
 ```bash
-gcc super_trunfo.c -o super_trunfo
-Execute o programa:
+gcc batalha_cartas.c -o batalha_cartas
+Execute o programa compilado:
 
 bash
 Copiar
 Editar
-./super_trunfo
+./batalha_cartas
+Siga as instruções na tela para inserir os dados das duas cartas.
