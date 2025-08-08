@@ -1,4 +1,4 @@
-#Super Trunfo – Comparação Avançada com Dois Atributos
+# Super Trunfo – Comparação Avançada com Dois Atributos
 
 Este programa em C simula uma rodada avançada do jogo **Super Trunfo** entre duas cartas de cidades/estados.  
 O jogador cadastra os dados de duas cartas e escolhe **dois atributos diferentes** para compará-las.  
@@ -11,7 +11,7 @@ O sistema então:
 
 ---
 
-##Funcionalidades
+## Funcionalidades
 
 - Cadastro de duas cartas com:
   - Estado
@@ -38,7 +38,7 @@ O sistema então:
 
 ---
 
-##Como executar
+## Como executar
 
 1. Compile o código:
 
