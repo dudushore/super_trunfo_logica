@@ -1,34 +1,30 @@
-Batalha de Cartas - Super Trunfo de Cidades
-Este é um programa simples em C, desenvolvido como trabalho acadêmico, que simula uma rodada do jogo Super Trunfo. O usuário cadastra os dados de duas cidades e, em seguida, escolhe dois atributos para compará-las.
+# Super Trunfo de Cidades - Lógica do Jogo
 
-Como Compilar e Executar
-1. Pré-requisito:
+Este é um programa simples em C que simula uma rodada do clássico jogo **Super Trunfo**, utilizando dados de cidades.
 
-É necessário ter um compilador C instalado (como o GCC).
+---
 
-2. Compilar o código:
-No seu terminal, execute o seguinte comando para criar o programa executável:
+## Como Compilar e Executar
 
-Bash
+Siga os passos abaixo para rodar o programa no seu computador.
 
-gcc main.c -o jogo
-3. Executar o programa:
-Após a compilação, execute o arquivo gerado:
+### Pré-requisitos
+
+Você precisa ter um compilador C, como o **GCC**, instalado no seu sistema.
+
+### Compilando o Código
+
+1.  Abra seu terminal.
+2.  Navegue até o diretório onde o arquivo `super_trunfo_logica.c` está salvo.
+3.  Execute o seguinte comando para compilar o código e criar o arquivo executável `jogo`:
+
+```bash
+gcc super_trunfo_logica.c -o jogo
+
+Executando o Programa
+No mesmo terminal, execute o seguinte comando para iniciar o jogo:
 
 Bash
 
 ./jogo
-Depois, basta seguir as instruções que aparecem no terminal.
-
-Regras do Jogo
-Cadastro: O usuário informa os dados (população, área, PIB, etc.) para as duas cartas (cidades).
-
-Escolha: O usuário escolhe dois atributos para a batalha.
-
-Comparação Individual:
-
-Para a maioria dos atributos, o maior valor vence.
-
-A única exceção é a Densidade Demográfica, onde o menor valor vence.
-
-Vencedor Final: O vencedor geral é a carta cuja soma dos valores dos dois atributos escolhidos for maior.
+Basta seguir as instruções que aparecerão na tela para jogar!
